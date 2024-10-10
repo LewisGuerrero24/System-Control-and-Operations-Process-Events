@@ -1,0 +1,21 @@
+{
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:5178"
+  },
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/products",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5079
+        }
+      ],
+      "UpstreamPathTemplate": "/products",
+      "UpstreamHttpMethod": [
+        "Get"
+      ]
+    }
+  ]
+}
