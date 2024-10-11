@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace Infrastructure.Data
 {
     public class MyContext : DbContext
@@ -12,6 +13,8 @@ namespace Infrastructure.Data
          public MyContext(DbContextOptions<MyContext> options): base(options){
             
             }
+
+        public DbSet<Prueba> pruebas {get; set;}
 
     }
 }

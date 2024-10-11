@@ -1,7 +1,6 @@
 /home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/ApiGateway/bin/Debug/net8.0/appsettings.Development.json
 /home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/ApiGateway/bin/Debug/net8.0/appsettings.json
 /home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/ApiGateway/bin/Debug/net8.0/Configuration/ocelot.global.json
-/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/ApiGateway/bin/Debug/net8.0/Configuration/ocelot.products.json
 /home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/ApiGateway/bin/Debug/net8.0/ocelot.json
 /home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/ApiGateway/bin/Debug/net8.0/ApiGateway
 /home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/ApiGateway/bin/Debug/net8.0/ApiGateway.deps.json
@@ -44,3 +43,8 @@
 /home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/ApiGateway/obj/Debug/net8.0/ApiGateway.pdb
 /home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/ApiGateway/obj/Debug/net8.0/ApiGateway.genruntimeconfig.cache
 /home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/ApiGateway/obj/Debug/net8.0/ref/ApiGateway.dll
+/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/ApiGateway/bin/Debug/net8.0/Configuration/ocelot.GCP.json
+/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/ApiGateway/bin/Debug/net8.0/Configuration/ocelot.POS.json
+/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/ApiGateway/bin/Debug/net8.0/Configuration/ocelot.SGI.json
+/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/ApiGateway/bin/Debug/net8.0/Configuration/ocelot.SGV.json
+/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/ApiGateway/obj/Debug/net8.0/ApiGateway.sourcelink.json
