@@ -4,15 +4,15 @@
   },
   "Routes": [
     {
-      "DownstreamPathTemplate": "/api/products",
+      "DownstreamPathTemplate": "/api/Prueba/list",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 5079
+          "Port": 5239
         }
       ],
-      "UpstreamPathTemplate": "/products",
+      "UpstreamPathTemplate": "/Prueba/List",
       "UpstreamHttpMethod": [
         "Get"
       ]
@@ -23,10 +23,24 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 5239
+          "Port": 5269
         }
       ],
-      "UpstreamPathTemplate": "/Prueba/List",
+      "UpstreamPathTemplate": "/Pruebagcp/List",
+      "UpstreamHttpMethod": [
+        "Get"
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/customers",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 4036
+        }
+      ],
+      "UpstreamPathTemplate": "/customers/data",
       "UpstreamHttpMethod": [
         "Get"
       ]
