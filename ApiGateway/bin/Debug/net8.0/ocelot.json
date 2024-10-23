@@ -15,7 +15,14 @@
       "UpstreamPathTemplate": "/Prueba/List",
       "UpstreamHttpMethod": [
         "Get"
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Keycloak",
+        "AllowedScopes": [
+          "profile",
+          "email"
+        ]
+      }
     },
     {
       "DownstreamPathTemplate": "/api/Prueba/list",
@@ -37,10 +44,38 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
+          "Port": 4046
+        }
+      ],
+      "UpstreamPathTemplate": "/customerssgi/data",
+      "UpstreamHttpMethod": [
+        "Get"
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/customers",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
           "Port": 4036
         }
       ],
       "UpstreamPathTemplate": "/customers/data",
+      "UpstreamHttpMethod": [
+        "Get"
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 9090
+        }
+      ],
+      "UpstreamPathTemplate": "/security",
       "UpstreamHttpMethod": [
         "Get"
       ]

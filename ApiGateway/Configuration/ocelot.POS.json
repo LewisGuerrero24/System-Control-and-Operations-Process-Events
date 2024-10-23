@@ -1,4 +1,3 @@
-
 {
     "Routes": [
         {
@@ -11,7 +10,13 @@
                 }
             ],
             "UpstreamPathTemplate": "/Prueba/List",
-            "UpstreamHttpMethod": [ "Get" ]
+            "UpstreamHttpMethod": [
+                "Get"
+            ],
+            "AuthenticationOptions": {
+                "AuthenticationProviderKey": "Auth0", 
+                "AllowedScopes": [] 
         }
+    }
     ]
- }   
+}
