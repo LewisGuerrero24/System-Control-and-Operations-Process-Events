@@ -27,6 +27,7 @@ namespace ApiGateway
                     var gcpOcelotPath = Path.Combine(hostingContext.HostingEnvironment.ContentRootPath, "Configuration", "ocelot.GCP.json");
                     var sgiOcelotPath = Path.Combine(hostingContext.HostingEnvironment.ContentRootPath, "Configuration", "ocelot.SGI.json");
                     var sgvOcelotPath = Path.Combine(hostingContext.HostingEnvironment.ContentRootPath, "Configuration", "ocelot.SGV.json");
+                    var grafOcelotPath = Path.Combine(hostingContext.HostingEnvironment.ContentRootPath, "Configuration", "ocelot.GRAF.json");
 
                     // Leer y combinar archivos Ocelot
                     combinedConfig.Merge(JObject.Parse(File.ReadAllText(globalOcelotPath)));
@@ -34,6 +35,7 @@ namespace ApiGateway
                     combinedConfig.Merge(JObject.Parse(File.ReadAllText(gcpOcelotPath)));
                     combinedConfig.Merge(JObject.Parse(File.ReadAllText(sgiOcelotPath )));
                     combinedConfig.Merge(JObject.Parse(File.ReadAllText(sgvOcelotPath )));
+                    combinedConfig.Merge(JObject.Parse(File.ReadAllText(grafOcelotPath )));
 
 
                     // Escribe el archivo combinado en la raíz del proyecto
