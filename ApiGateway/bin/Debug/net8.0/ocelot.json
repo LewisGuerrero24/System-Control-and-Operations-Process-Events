@@ -17,11 +17,8 @@
         "Get"
       ],
       "AuthenticationOptions": {
-        "AuthenticationProviderKey": "Keycloak",
-        "AllowedScopes": [
-          "profile",
-          "email"
-        ]
+        "AuthenticationProviderKey": "Auth0",
+        "AllowedScopes": []
       }
     },
     {
