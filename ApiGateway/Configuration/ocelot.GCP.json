@@ -1,4 +1,3 @@
-
 {
     "Routes": [
         {
@@ -11,7 +10,9 @@
                 }
             ],
             "UpstreamPathTemplate": "/Pruebagcp/List",
-            "UpstreamHttpMethod": [ "Get" ]
+            "UpstreamHttpMethod": [
+                "Get"
+            ]
         }
     ]
- }   
+}

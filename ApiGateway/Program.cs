@@ -1,6 +1,8 @@
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 using Newtonsoft.Json.Linq;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 
 namespace ApiGateway
 {
@@ -27,16 +29,15 @@ namespace ApiGateway
                     var gcpOcelotPath = Path.Combine(hostingContext.HostingEnvironment.ContentRootPath, "Configuration", "ocelot.GCP.json");
                     var sgiOcelotPath = Path.Combine(hostingContext.HostingEnvironment.ContentRootPath, "Configuration", "ocelot.SGI.json");
                     var sgvOcelotPath = Path.Combine(hostingContext.HostingEnvironment.ContentRootPath, "Configuration", "ocelot.SGV.json");
-                    var grafOcelotPath = Path.Combine(hostingContext.HostingEnvironment.ContentRootPath, "Configuration", "ocelot.GRAF.json");
+                    var securityOcelotPath = Path.Combine(hostingContext.HostingEnvironment.ContentRootPath, "Configuration", "ocelot.SECURITY.json");
 
                     // Leer y combinar archivos Ocelot
                     combinedConfig.Merge(JObject.Parse(File.ReadAllText(globalOcelotPath)));
-                    combinedConfig.Merge(JObject.Parse(File.ReadAllText(posOcelotPath )));
+                    combinedConfig.Merge(JObject.Parse(File.ReadAllText(posOcelotPath)));
                     combinedConfig.Merge(JObject.Parse(File.ReadAllText(gcpOcelotPath)));
-                    combinedConfig.Merge(JObject.Parse(File.ReadAllText(sgiOcelotPath )));
-                    combinedConfig.Merge(JObject.Parse(File.ReadAllText(sgvOcelotPath )));
-                    combinedConfig.Merge(JObject.Parse(File.ReadAllText(grafOcelotPath )));
-
+                    combinedConfig.Merge(JObject.Parse(File.ReadAllText(sgiOcelotPath)));
+                    combinedConfig.Merge(JObject.Parse(File.ReadAllText(sgvOcelotPath)));
+                    combinedConfig.Merge(JObject.Parse(File.ReadAllText(securityOcelotPath)));
 
                     // Escribe el archivo combinado en la raíz del proyecto
                     var combinedOcelotPath = Path.Combine(hostingContext.HostingEnvironment.ContentRootPath, "ocelot.json");
@@ -46,11 +47,36 @@ namespace ApiGateway
                 })
                 .ConfigureServices(s =>
                 {
+                    // 1. Add Authentication Services
+                    // services.AddAuthentication(options =>
+                    // {
+                    //     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                    //     options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                    // }).AddJwtBearer(options =>
+                    // {
+                    //     options.Authority = "https://dev-fb4ykv0j2yzilwsr.us.auth0.com/";
+                    //     options.Audience = "221020";
+                    // });
+
+                    s.AddAuthentication("Auth0")
+                    .AddJwtBearer("Auth0", options =>
+                    {
+                        options.Authority = "https://dev-fb4ykv0j2yzilwsr.us.auth0.com/"; // Dominio de Auth0
+                        options.Audience = "221020"; // Identificador de tu API
+                    });
                     s.AddOcelot();
                 })
                 .UseIISIntegration()
                 .Configure(app =>
                 {
+
+                    app.UseAuthentication();
+                    app.UseRouting();
+                    app.UseEndpoints(endpoints =>
+                    {
+                        endpoints.MapControllers();
+                    });
+
                     app.UseOcelot().Wait();
                 })
                 .Build()

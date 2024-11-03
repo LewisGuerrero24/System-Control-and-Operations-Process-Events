@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/ApiGateway/ApiGateway.csproj": {}
+    "C:\\Users\\MAICOL\\Proyect-Microservices-System-Control-and-Operations-Process-Event\\ApiGateway\\ApiGateway.csproj": {}
   },
   "projects": {
-    "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/ApiGateway/ApiGateway.csproj": {
+    "C:\\Users\\MAICOL\\Proyect-Microservices-System-Control-and-Operations-Process-Event\\ApiGateway\\ApiGateway.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/ApiGateway/ApiGateway.csproj",
+        "projectUniqueName": "C:\\Users\\MAICOL\\Proyect-Microservices-System-Control-and-Operations-Process-Event\\ApiGateway\\ApiGateway.csproj",
         "projectName": "ApiGateway",
-        "projectPath": "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/ApiGateway/ApiGateway.csproj",
-        "packagesPath": "/home/lewisguerrero/.nuget/packages/",
-        "outputPath": "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/ApiGateway/obj/",
+        "projectPath": "C:\\Users\\MAICOL\\Proyect-Microservices-System-Control-and-Operations-Process-Event\\ApiGateway\\ApiGateway.csproj",
+        "packagesPath": "C:\\Users\\MAICOL\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MAICOL\\Proyect-Microservices-System-Control-and-Operations-Process-Event\\ApiGateway\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/lewisguerrero/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\MAICOL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,9 +45,21 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.AspNetCore.Authentication.OpenIdConnect": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.8, )"
+            },
+            "Microsoft.IdentityModel.Protocols.OpenIdConnect": {
+              "target": "Package",
+              "version": "[8.1.2, )"
             },
             "Ocelot": {
               "target": "Package",
@@ -54,6 +68,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.1.2, )"
             }
           },
           "imports": [
@@ -75,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
