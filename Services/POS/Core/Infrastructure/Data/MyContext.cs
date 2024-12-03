@@ -26,5 +26,49 @@ namespace Infrastructure.Data
 
         public DbSet<Payment> payments { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Branch>()
+            .HasMany(e => e.sales)
+            .WithOne(e => e.branch)
+            .HasForeignKey(e => e.branchId)
+            .IsRequired();
+
+             modelBuilder.Entity<Customer>()
+            .HasMany(e => e.sales)
+            .WithOne(e => e.customer)
+            .HasForeignKey(e => e.customerId)
+            .IsRequired();
+        
+
+             modelBuilder.Entity<Employee>()
+            .HasMany(e => e.sales)
+            .WithOne(e => e.employee)
+            .HasForeignKey(e => e.employeeId)
+            .IsRequired();
+
+            modelBuilder.Entity<typePayment>()
+            .HasMany(e => e.sales)
+            .WithOne(e => e.typePayment)
+            .HasForeignKey(e => e.typePaymentId)
+            .OnDelete(DeleteBehavior.NoAction) // Cambiado a Restrict
+            .IsRequired();
+
+            modelBuilder.Entity<typePayment>()
+            .HasMany(e => e.payments)
+            .WithOne(e => e.typePayment)
+            .HasForeignKey(e => e.typePaymentId)
+            .OnDelete(DeleteBehavior.NoAction) // Cambiado a Restrict
+            .IsRequired();
+
+            modelBuilder.Entity<Sale>()
+            .HasMany(e => e.salesDetails)
+            .WithOne(e => e.sales)
+            .HasForeignKey(e => e.salesId)
+            .IsRequired();
+        }
+
+    
+
     }
 }

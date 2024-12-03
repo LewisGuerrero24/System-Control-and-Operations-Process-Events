@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
-    public class Customer
+    public class Customer : AuditableEntity
     {
         public  string name { get; set; }
 
@@ -17,7 +17,7 @@ namespace Domain.Entities
 
         public string address {get; set; }
     
-        public List<Sale> sales {get; set;}
+        public ICollection<Sale> sales {get; set;}
         
     }
 }

@@ -9,15 +9,25 @@ namespace Domain.Entities
     {
         public DateTime date { get; set; }
 
-        public Employee employee {get; set;}
+        public int employeeId {get; set;}
 
-        public Customer customer {get; set;}
+        public Employee employee {get; set;} = null!;   
 
-        public Branch branch {get; set;}
+        public int customerId;
 
-        public Payment payment {get; set;} 
+        public Customer customer {get; set;} = null!;
+
+
+        public int branchId {get; set;}
+        public Branch branch {get; set;} = null!;
+
+
+        public int typePaymentId {get; set;}
+        public typePayment typePayment {get; set;}= null!;
 
         public int total { get; set; }
+
+        public ICollection<SalesDetail> salesDetails { get; set; }
         
     }
 }

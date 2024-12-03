@@ -19,7 +19,7 @@ namespace Domain.Entities
 
         public DateTime hiring_Date { get; set; }
 
-        public List<Sale> sales {get; set;}
+        public ICollection<Sale> sales {get; set;}
 
 
 

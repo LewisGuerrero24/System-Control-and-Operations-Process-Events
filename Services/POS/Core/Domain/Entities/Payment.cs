@@ -7,7 +7,18 @@ namespace Domain.Entities
 {
        public class Payment: AuditableEntity
     {
-        public string name { get; set; }
-        public List<Sale> sale {get; set;}
+       
+        public int saleId {get; set;}
+
+        public Sale sale {get; set;} = null!;
+
+        public int typePaymentId {get; set;}
+
+        public typePayment typePayment {get; set;} = null!;
+
+        public int amount {get; set;}
+
+        public DateTime datePayment {get; set;}
+
     }
 }
