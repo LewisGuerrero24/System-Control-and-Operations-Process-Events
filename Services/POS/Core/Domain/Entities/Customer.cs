@@ -17,7 +17,7 @@ namespace Domain.Entities
 
         public string address {get; set; }
     
-        public ICollection<Sale> sales {get; set;}
+        public ICollection<Sale> sales {get; set;} = new List<Sale>();
         
     }
 }

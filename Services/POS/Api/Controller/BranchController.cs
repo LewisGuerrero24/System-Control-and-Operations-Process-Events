@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Application.Dtos;
 using Application.Services;
 using Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
@@ -37,7 +38,7 @@ namespace Api.Controller
 
 
         [HttpPost]
-        public async Task<ActionResult<Branch>> createBranch(Branch newBranch){
+        public async Task<ActionResult<Branch>> createBranch(BranchDto newBranch){
             var brachCreated = await _branchServices.createBranch(newBranch);
             return Ok(brachCreated);
         }

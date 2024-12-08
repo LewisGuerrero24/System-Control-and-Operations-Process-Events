@@ -27,6 +27,8 @@ builder.Services.AddControllers();
 
 builder.Services.AddScoped<PruebaService>();
 builder.Services.AddScoped<IPruebaRepository,PruebaRepository>();
+builder.Services.AddScoped<CustomerServices>();
+builder.Services.AddScoped<ICustomerRepository,CustomerRepository>();
 builder.Services.AddScoped<BranchServices>();
 builder.Services.AddScoped<IBranchRepository,BranchRepository>();
 builder.Services.AddSingleton<IKafkaConsumer, KafkaConsumerRepository>();

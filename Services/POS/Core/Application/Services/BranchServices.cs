@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Application.Dtos;
 using Application.useCases;
 using Domain.Entities;
 using Domain.Ports;
@@ -23,8 +24,15 @@ namespace Application.Services
             return branchData;
         }
 
-        public async Task<Branch> createBranch(Branch newBranch)
+        public async Task<Branch> createBranch(BranchDto BranchDto)
         {
+
+            var newBranch = new Branch{
+                name = BranchDto.Name,
+                city = BranchDto.City,
+                phone = BranchDto.Phone,
+                address = BranchDto.Address
+            };
             Branch newBranchData = await _branchRepository.createBranch(newBranch);
             return newBranchData;
         }

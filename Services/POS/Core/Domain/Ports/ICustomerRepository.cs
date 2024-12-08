@@ -8,14 +8,14 @@ namespace Domain.Ports
 {
     public interface ICustomerRepository
     {
-        ICollection<Customer> getAllPayment();
+        Task<ICollection<Customer>> getAllCustomer();
 
-        Customer CustomerFindById(int customer_Id);
+        Task<Customer> CustomerFindById(int customer_Id);
 
-        Customer createCustomer(Customer newCustomer);
+        Task<Customer> createCustomer(Customer newCustomer);
 
-        Customer updateCustomer(int customer_Id, Customer customer);
+        Task<Customer> updateCustomer(Customer customerUpdate, Customer newCustomer);
 
-        bool deletePayment(int customer_Id);
+        Task<Customer> deleteCustomer(Customer customer);
     }
 }
