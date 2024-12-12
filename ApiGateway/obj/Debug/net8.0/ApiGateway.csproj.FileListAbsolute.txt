@@ -13,7 +13,6 @@
 /home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/ApiGateway/bin/Debug/net8.0/Configuration/ocelot.POS.json
 /home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/ApiGateway/bin/Debug/net8.0/Configuration/ocelot.SECURITY.json
 /home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/ApiGateway/bin/Debug/net8.0/Configuration/ocelot.SGI.json
-/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/ApiGateway/bin/Debug/net8.0/Configuration/ocelot.SGV.json
 /home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/ApiGateway/bin/Debug/net8.0/ocelot.json
 /home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/ApiGateway/bin/Debug/net8.0/ApiGateway
 /home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/ApiGateway/bin/Debug/net8.0/ApiGateway.deps.json
@@ -59,6 +58,7 @@
 /home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/ApiGateway/obj/Debug/net8.0/ref/ApiGateway.dll
 /home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/ApiGateway/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
 /home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/ApiGateway/bin/Debug/net8.0/Microsoft.Bcl.TimeProvider.dll
+<<<<<<< HEAD
 C:\Users\MAICOL\Proyect-Microservices-System-Control-and-Operations-Process-Event\ApiGateway\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\MAICOL\Proyect-Microservices-System-Control-and-Operations-Process-Event\ApiGateway\bin\Debug\net8.0\appsettings.json
 C:\Users\MAICOL\Proyect-Microservices-System-Control-and-Operations-Process-Event\ApiGateway\bin\Debug\net8.0\Configuration\ocelot.GCP.json
@@ -121,3 +121,6 @@ C:\Users\MAICOL\Proyect-Microservices-System-Control-and-Operations-Process-Even
 C:\Users\MAICOL\Proyect-Microservices-System-Control-and-Operations-Process-Event\ApiGateway\obj\Debug\net8.0\ApiGateway.pdb
 C:\Users\MAICOL\Proyect-Microservices-System-Control-and-Operations-Process-Event\ApiGateway\obj\Debug\net8.0\ApiGateway.genruntimeconfig.cache
 C:\Users\MAICOL\Proyect-Microservices-System-Control-and-Operations-Process-Event\ApiGateway\obj\Debug\net8.0\ref\ApiGateway.dll
+=======
+/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/ApiGateway/bin/Debug/net8.0/Configuration/ocelot.SFF.json
+>>>>>>> cff63d9dee7f91af6b38b8ade099a1e0b22b5544

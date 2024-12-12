@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CXgedH/9XoM=",
+  "dgSpecHash": "kiKB4LgCpA0zk76CKLkvIEYvt9h0tH76nus4PmSKYdeUSbHJyX9yVoEAZKFC+/JxLm/UC7TS06LLOuD7rb2Qtw==",
   "success": true,
-  "projectFilePath": "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/GCP/Core/Domain/Domain.csproj",
+  "projectFilePath": "C:\\Users\\MAICOL\\Proyect-Microservices-System-Control-and-Operations-Process-Event\\Services\\GCP\\Core\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

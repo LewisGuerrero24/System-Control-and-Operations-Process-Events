@@ -1,6 +1,6 @@
-using Application.Service;
-using Domain.Ports;
-using Infrastructure.Adapters;
+// using Application.Service;
+// using Domain.Ports;
+// using Infrastructure.Adapters;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,8 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
-builder.Services.AddScoped<PruebaService>();
-builder.Services.AddScoped<IPruebaRepository,PruebaRepository>();
+// builder.Services.AddScoped<PruebaService>();
+// builder.Services.AddScoped<IPruebaRepository,PruebaRepository>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<MyContext>(
