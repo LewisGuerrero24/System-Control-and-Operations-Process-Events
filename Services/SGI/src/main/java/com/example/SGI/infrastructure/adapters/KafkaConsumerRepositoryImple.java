@@ -9,7 +9,7 @@ public class KafkaConsumerRepositoryImple implements KafkaConsumerPorts {
 
 
     @Override
-    @KafkaListener(topics = "sales-transactions",groupId = "pos")
+    @KafkaListener(topics = "Update-Inventary",groupId = "pos")
     public void listen(String message) {
         try {
             System.out.println("Received message: " + message);

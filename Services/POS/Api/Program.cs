@@ -29,9 +29,17 @@ builder.Services.AddScoped<PruebaService>();
 builder.Services.AddScoped<IPruebaRepository,PruebaRepository>();
 builder.Services.AddScoped<CustomerServices>();
 builder.Services.AddScoped<ICustomerRepository,CustomerRepository>();
+builder.Services.AddScoped<SaleDetailsServices>();
+builder.Services.AddScoped<ISaleDetailRepository,SaleDetailRepository>();
+builder.Services.AddScoped<SaleServices>();
+builder.Services.AddScoped<ISaleRepository,SaleRepository>();
 builder.Services.AddScoped<BranchServices>();
 builder.Services.AddScoped<IBranchRepository,BranchRepository>();
+builder.Services.AddScoped<EmployeeServices>();
+builder.Services.AddScoped<IEmployeeRepository,EmployeeRepository>();
+
 builder.Services.AddSingleton<IKafkaConsumer, KafkaConsumerRepository>();
+
 builder.Services.AddScoped<IKafkaProducer, KafkaProducerRepository>();
 builder.Services.AddScoped<PruebaKafkaServices>();
 builder.Services.AddHostedService<KafkaConsumerServices>();

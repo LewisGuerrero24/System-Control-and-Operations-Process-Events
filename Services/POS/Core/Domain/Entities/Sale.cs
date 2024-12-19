@@ -21,13 +21,14 @@ namespace Domain.Entities
         public int branchId {get; set;}
         public Branch branch {get; set;} = null!;
 
+        public SalePayment? SalePayment { get; set; }
 
         public int typePaymentId {get; set;}
-        public typePayment typePayment {get; set;}= null!;
+        public TypePayment typePayment {get; set;}= null!;
 
         public int total { get; set; }
 
-        public ICollection<SalesDetail> salesDetails { get; set; }
+        public ICollection<SalesDetail>? salesDetails { get; set; }
         
     }
 }

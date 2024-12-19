@@ -8,14 +8,14 @@ namespace Domain.Ports
 {
     public interface IEmployeeRepository
     {
-        ICollection<Employee> getAllEmployee();
+        Task<ICollection<Employee>> GetAllEmployee();
 
-        Employee EmployeeFindById(int employee_Id);
+        Task<Employee> EmployeeFindById(int Employee_Id);
 
-        Employee createEmployee(Employee newEmployee);
+        Task<Employee> CreateEmployee(Employee newEmployee);
 
-        Employee updateEmployee(int employee_Id, Employee employee);
+        Task<Employee> UpdateEmployee(Employee employeeUpdate, Employee newEmployee);
 
-        bool deleteEmployee(int employee_Id);
+        Task<Employee> DeleteEmployee(Employee employee);
     }
 }

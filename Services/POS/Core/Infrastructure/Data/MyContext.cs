@@ -10,21 +10,28 @@ namespace Infrastructure.Data
 {
     public class MyContext : DbContext
     {
-         public MyContext(DbContextOptions<MyContext> options): base(options){
-            
-            }
+        public MyContext(DbContextOptions<MyContext> options) : base(options)
+        {
 
-        public DbSet<Prueba> pruebas {get; set;}
+        }
+
+        public DbSet<Prueba> pruebas { get; set; }
 
         public DbSet<Sale> sales { get; set; }
 
-        public DbSet<Branch> branches {get; set;}
+        public DbSet<Branch> branches { get; set; }
 
-        public DbSet<Customer> customers {get; set;}
+        public DbSet<Customer> customers { get; set; }
 
         public DbSet<Employee> employees { get; set; }
 
         public DbSet<Payment> payments { get; set; }
+
+        public DbSet<SalesDetail> salesDetails { get; set; }
+
+        public DbSet<SalePayment> salesPayment { get; set; }
+
+        public DbSet<TypePayment> typePayments { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -34,27 +41,27 @@ namespace Infrastructure.Data
             .HasForeignKey(e => e.branchId)
             .IsRequired();
 
-             modelBuilder.Entity<Customer>()
-            .HasMany(e => e.sales)
-            .WithOne(e => e.customer)
-            .HasForeignKey(e => e.customerId)
-            .IsRequired();
-        
+            modelBuilder.Entity<Customer>()
+           .HasMany(e => e.sales)
+           .WithOne(e => e.customer)
+           .HasForeignKey(e => e.customerId)
+           .IsRequired();
 
-             modelBuilder.Entity<Employee>()
-            .HasMany(e => e.sales)
-            .WithOne(e => e.employee)
-            .HasForeignKey(e => e.employeeId)
-            .IsRequired();
 
-            modelBuilder.Entity<typePayment>()
+            modelBuilder.Entity<Employee>()
+           .HasMany(e => e.sales)
+           .WithOne(e => e.employee)
+           .HasForeignKey(e => e.employeeId)
+           .IsRequired();
+
+            modelBuilder.Entity<TypePayment>()
             .HasMany(e => e.sales)
             .WithOne(e => e.typePayment)
             .HasForeignKey(e => e.typePaymentId)
             .OnDelete(DeleteBehavior.NoAction) // Cambiado a Restrict
             .IsRequired();
 
-            modelBuilder.Entity<typePayment>()
+            modelBuilder.Entity<TypePayment>()
             .HasMany(e => e.payments)
             .WithOne(e => e.typePayment)
             .HasForeignKey(e => e.typePaymentId)
@@ -66,9 +73,24 @@ namespace Infrastructure.Data
             .WithOne(e => e.sales)
             .HasForeignKey(e => e.salesId)
             .IsRequired();
+
+
+            modelBuilder.Entity<SalePayment>()
+       .HasKey(sp => new { sp.SaleId, sp.PaymentId }); // Clave compuesta
+
+            modelBuilder.Entity<SalePayment>()
+                .HasOne(sp => sp.Sale)
+                .WithOne(s => s.SalePayment) // Relación uno a uno
+                .HasForeignKey<SalePayment>(sp => sp.SaleId);
+
+            modelBuilder.Entity<SalePayment>()
+                .HasOne(sp => sp.Payment)
+                .WithOne(p => p.SalePayment) // Relación uno a uno
+                .HasForeignKey<SalePayment>(sp => sp.PaymentId);
+
         }
 
-    
+
 
     }
 }

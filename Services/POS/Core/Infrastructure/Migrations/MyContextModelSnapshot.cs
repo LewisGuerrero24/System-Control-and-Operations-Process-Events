@@ -182,15 +182,10 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime>("datePayment")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("saleId")
-                        .HasColumnType("int");
-
                     b.Property<int>("typePaymentId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("saleId");
 
                     b.HasIndex("typePaymentId");
 
@@ -267,6 +262,43 @@ namespace Infrastructure.Migrations
                     b.ToTable("sales");
                 });
 
+            modelBuilder.Entity("Domain.Entities.SalePayment", b =>
+                {
+                    b.Property<int>("SaleId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PaymentId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CreateBy")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("LinkedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("UpdateBy")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("SaleId", "PaymentId");
+
+                    b.HasIndex("PaymentId")
+                        .IsUnique();
+
+                    b.HasIndex("SaleId")
+                        .IsUnique();
+
+                    b.ToTable("salesPayment");
+                });
+
             modelBuilder.Entity("Domain.Entities.SalesDetail", b =>
                 {
                     b.Property<int>("Id")
@@ -306,10 +338,10 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("salesId");
 
-                    b.ToTable("SalesDetail");
+                    b.ToTable("salesDetails");
                 });
 
-            modelBuilder.Entity("Domain.Entities.typePayment", b =>
+            modelBuilder.Entity("Domain.Entities.TypePayment", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -335,24 +367,16 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("typePayment");
+                    b.ToTable("typePayments");
                 });
 
             modelBuilder.Entity("Domain.Entities.Payment", b =>
                 {
-                    b.HasOne("Domain.Entities.Sale", "sale")
-                        .WithMany()
-                        .HasForeignKey("saleId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Domain.Entities.typePayment", "typePayment")
+                    b.HasOne("Domain.Entities.TypePayment", "typePayment")
                         .WithMany("payments")
                         .HasForeignKey("typePaymentId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
-
-                    b.Navigation("sale");
 
                     b.Navigation("typePayment");
                 });
@@ -377,7 +401,7 @@ namespace Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Domain.Entities.typePayment", "typePayment")
+                    b.HasOne("Domain.Entities.TypePayment", "typePayment")
                         .WithMany("sales")
                         .HasForeignKey("typePaymentId")
                         .OnDelete(DeleteBehavior.NoAction)
@@ -390,6 +414,25 @@ namespace Infrastructure.Migrations
                     b.Navigation("employee");
 
                     b.Navigation("typePayment");
+                });
+
+            modelBuilder.Entity("Domain.Entities.SalePayment", b =>
+                {
+                    b.HasOne("Domain.Entities.Payment", "Payment")
+                        .WithOne("SalePayment")
+                        .HasForeignKey("Domain.Entities.SalePayment", "PaymentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Entities.Sale", "Sale")
+                        .WithOne("SalePayment")
+                        .HasForeignKey("Domain.Entities.SalePayment", "SaleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Payment");
+
+                    b.Navigation("Sale");
                 });
 
             modelBuilder.Entity("Domain.Entities.SalesDetail", b =>
@@ -418,12 +461,19 @@ namespace Infrastructure.Migrations
                     b.Navigation("sales");
                 });
 
+            modelBuilder.Entity("Domain.Entities.Payment", b =>
+                {
+                    b.Navigation("SalePayment");
+                });
+
             modelBuilder.Entity("Domain.Entities.Sale", b =>
                 {
+                    b.Navigation("SalePayment");
+
                     b.Navigation("salesDetails");
                 });
 
-            modelBuilder.Entity("Domain.Entities.typePayment", b =>
+            modelBuilder.Entity("Domain.Entities.TypePayment", b =>
                 {
                     b.Navigation("payments");
 

@@ -8,13 +8,12 @@ namespace Domain.Entities
        public class Payment: AuditableEntity
     {
        
-        public int saleId {get; set;}
 
-        public Sale sale {get; set;} = null!;
+        public SalePayment? SalePayment { get; set; }
 
         public int typePaymentId {get; set;}
 
-        public typePayment typePayment {get; set;} = null!;
+        public TypePayment typePayment {get; set;} = null!;
 
         public int amount {get; set;}
 

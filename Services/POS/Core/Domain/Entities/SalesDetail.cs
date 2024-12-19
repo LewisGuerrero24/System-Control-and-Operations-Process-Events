@@ -7,8 +7,9 @@ namespace Domain.Entities
 {
     public class SalesDetail : AuditableEntity
     {
-        public int salesId { get; set; }
+      
 
+        public int salesId;
         public Sale sales {get; set;} = null!;
 
         public int product {get; set;}
