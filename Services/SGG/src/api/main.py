@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from api.Controllers.kpi_controller import router as kpi_router
 
+
 app = FastAPI()
 
 # Registrar las rutas
