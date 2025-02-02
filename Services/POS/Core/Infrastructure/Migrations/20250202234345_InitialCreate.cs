@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class NewTables : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -75,7 +75,21 @@ namespace Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "payments",
+                name: "pruebas",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    lastname = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_pruebas", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "typePayment",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -88,7 +102,7 @@ namespace Infrastructure.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_payments", x => x.Id);
+                    table.PrimaryKey("PK_typePayment", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -101,7 +115,7 @@ namespace Infrastructure.Migrations
                     employeeId = table.Column<int>(type: "int", nullable: false),
                     customerId = table.Column<int>(type: "int", nullable: false),
                     branchId = table.Column<int>(type: "int", nullable: false),
-                    paymentId = table.Column<int>(type: "int", nullable: false),
+                    typePaymentId = table.Column<int>(type: "int", nullable: false),
                     total = table.Column<int>(type: "int", nullable: false),
                     CreateBy = table.Column<int>(type: "int", nullable: false),
                     CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -130,12 +144,79 @@ namespace Infrastructure.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_sales_payments_paymentId",
-                        column: x => x.paymentId,
-                        principalTable: "payments",
+                        name: "FK_sales_typePayment_typePaymentId",
+                        column: x => x.typePaymentId,
+                        principalTable: "typePayment",
+                        principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "payments",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    saleId = table.Column<int>(type: "int", nullable: false),
+                    typePaymentId = table.Column<int>(type: "int", nullable: false),
+                    amount = table.Column<int>(type: "int", nullable: false),
+                    datePayment = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    CreateBy = table.Column<int>(type: "int", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdateBy = table.Column<int>(type: "int", nullable: false),
+                    UpdateDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_payments", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_payments_sales_saleId",
+                        column: x => x.saleId,
+                        principalTable: "sales",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_payments_typePayment_typePaymentId",
+                        column: x => x.typePaymentId,
+                        principalTable: "typePayment",
+                        principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "salesDetails",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    salesId = table.Column<int>(type: "int", nullable: false),
+                    product = table.Column<int>(type: "int", nullable: false),
+                    quantity = table.Column<int>(type: "int", nullable: false),
+                    unitPrice = table.Column<int>(type: "int", nullable: false),
+                    subtotal = table.Column<int>(type: "int", nullable: false),
+                    CreateBy = table.Column<int>(type: "int", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdateBy = table.Column<int>(type: "int", nullable: false),
+                    UpdateDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_salesDetails", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_salesDetails_sales_salesId",
+                        column: x => x.salesId,
+                        principalTable: "sales",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_payments_saleId",
+                table: "payments",
+                column: "saleId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_payments_typePaymentId",
+                table: "payments",
+                column: "typePaymentId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_sales_branchId",
@@ -153,14 +234,28 @@ namespace Infrastructure.Migrations
                 column: "employeeId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_sales_paymentId",
+                name: "IX_sales_typePaymentId",
                 table: "sales",
-                column: "paymentId");
+                column: "typePaymentId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_salesDetails_salesId",
+                table: "salesDetails",
+                column: "salesId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "payments");
+
+            migrationBuilder.DropTable(
+                name: "pruebas");
+
+            migrationBuilder.DropTable(
+                name: "salesDetails");
+
             migrationBuilder.DropTable(
                 name: "sales");
 
@@ -174,7 +269,7 @@ namespace Infrastructure.Migrations
                 name: "employees");
 
             migrationBuilder.DropTable(
-                name: "payments");
+                name: "typePayment");
         }
     }
 }
