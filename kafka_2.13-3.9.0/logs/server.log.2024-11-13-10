@@ -1,0 +1,6 @@
+[2024-11-13 11:46:35,431] INFO Expiring session 0x10000029dda0000, timeout of 18000ms exceeded (org.apache.zookeeper.server.ZooKeeperServer)
+[2024-11-13 11:46:35,455] INFO Unable to read additional data from client, it probably closed the socket: address = /127.0.0.1:45714, session = 0x10000029dda0000 (org.apache.zookeeper.server.NIOServerCnxn)
+[2024-11-13 11:46:35,458] INFO Unable to read additional data from client, it probably closed the socket: address = /127.0.0.1:45714, session = 0x10000029dda0000 (org.apache.zookeeper.server.NIOServerCnxn)
+[2024-11-13 11:46:35,459] INFO Unable to read additional data from client, it probably closed the socket: address = /127.0.0.1:45714, session = 0x10000029dda0000 (org.apache.zookeeper.server.NIOServerCnxn)
+[2024-11-13 11:46:35,460] INFO Unable to read additional data from client, it probably closed the socket: address = /127.0.0.1:45714, session = 0x10000029dda0000 (org.apache.zookeeper.server.NIOServerCnxn)
+[2024-11-13 11:46:37,690] INFO Invalid session 0x10000029dda0000 for client /[0:0:0:0:0:0:0:1]:60144, probably expired (org.apache.zookeeper.server.ZooKeeperServer)
