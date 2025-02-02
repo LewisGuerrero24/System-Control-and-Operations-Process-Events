@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Application.Services;
+using Domain;
 using Domain.Dtos;
 using Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
@@ -31,9 +32,9 @@ namespace Api.Controller
         var employeeData = await _employeeServices.EmployeeUnique(id);
         return Ok(employeeData);
     }
-
+    
     [HttpPost]
-    public async Task<ActionResult<Employee>> CreateEmployee(EmployeeDto employee){
+    public async Task<ActionResult<Employee>> CreateEmployee(employeeDto employee){
         var employeeData = await _employeeServices.CreateEmployee(employee);
         return Ok(employeeData);
     }
@@ -47,7 +48,7 @@ namespace Api.Controller
             }
 
 
-        var employee = await _employeeServices.UpdateCustomer(employee_id,newEmployee);
+        var employee = await _employeeServices.UpdateEmployee(employee_id,newEmployee);
         return employee;
     }
 

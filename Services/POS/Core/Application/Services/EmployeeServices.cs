@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Application.useCases;
-using Domain.Dtos;
+using Domain;
 using Domain.Entities;
 using Domain.Ports;
 
@@ -19,7 +19,7 @@ namespace Application.Services
             _employeeRepository = employeeRepository;
         }
 
-        public async Task<Employee> CreateEmployee(EmployeeDto employeeDto)
+        public async Task<Employee> CreateEmployee(employeeDto employeeDto)
         {
             var newEmployee = new Employee{
                 name = employeeDto.name,
@@ -32,6 +32,11 @@ namespace Application.Services
             var dataEmployee = await _employeeRepository.CreateEmployee(newEmployee);
             return dataEmployee;
 
+        }
+
+        public Task<Employee> DeleteCustomer(int employee_Id)
+        {
+            throw new NotImplementedException();
         }
 
         public async Task<Employee> DeleteEmployee(int employee_Id)
@@ -53,7 +58,7 @@ namespace Application.Services
             return listEmployee;
         }
 
-        public async Task<Employee> UpdateCustomer(int employee_Id, Employee newEmployee)
+        public async Task<Employee> UpdateEmployee(int employee_Id, Employee newEmployee)
         {
              var employeeData = await _employeeRepository.EmployeeFindById(employee_Id);
              return await _employeeRepository.UpdateEmployee(employeeData, newEmployee);

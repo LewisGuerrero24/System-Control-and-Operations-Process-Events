@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "dUn3bH+l/J8=",
+  "dgSpecHash": "tPLdezWl8PI=",
   "success": true,
-  "projectFilePath": "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Domain/Domain.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Domain/Domain.csproj",
+  "expectedPackageFiles": [
+    "/home/lewisaramismanzanoguerrero/.nuget/packages/microsoft.netcore.app.ref/8.0.11/microsoft.netcore.app.ref.8.0.11.nupkg.sha512",
+    "/home/lewisaramismanzanoguerrero/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.11/microsoft.aspnetcore.app.ref.8.0.11.nupkg.sha512"
+  ],
   "logs": []
 }

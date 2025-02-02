@@ -1,34 +1,34 @@
-<<<<<<< HEAD
 {
   "format": 1,
   "restore": {
-    "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Infrastructure/Infrastructure.csproj": {}
+    "/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Infrastructure/Infrastructure.csproj": {}
   },
   "projects": {
-    "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Application/Application.csproj": {
+    "/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Application/Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Application/Application.csproj",
+        "projectUniqueName": "/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Application/Application.csproj",
         "projectName": "Application",
-        "projectPath": "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Application/Application.csproj",
-        "packagesPath": "/home/lewisguerrero/.nuget/packages/",
-        "outputPath": "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Application/obj/",
+        "projectPath": "/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Application/Application.csproj",
+        "packagesPath": "/home/lewisaramismanzanoguerrero/.nuget/packages/",
+        "outputPath": "/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/lewisguerrero/.nuget/NuGet/NuGet.Config"
+          "/home/lewisaramismanzanoguerrero/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "/usr/lib64/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Domain/Domain.csproj": {
-                "projectPath": "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Domain/Domain.csproj"
+              "/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Domain/Domain.csproj": {
+                "projectPath": "/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Domain/Domain.csproj"
               }
             }
           }
@@ -42,216 +42,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
-      },
-      "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Domain/Domain.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Domain/Domain.csproj",
-        "projectName": "Domain",
-        "projectPath": "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Domain/Domain.csproj",
-        "packagesPath": "/home/lewisguerrero/.nuget/packages/",
-        "outputPath": "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Domain/obj/",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "/home/lewisguerrero/.nuget/NuGet/NuGet.Config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "https://api.nuget.org/v3/index.json": {}
         },
-        "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        }
-      },
-      "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Infrastructure/Infrastructure.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Infrastructure/Infrastructure.csproj",
-        "projectName": "Infrastructure",
-        "projectPath": "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Infrastructure/Infrastructure.csproj",
-        "packagesPath": "/home/lewisguerrero/.nuget/packages/",
-        "outputPath": "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Infrastructure/obj/",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "/home/lewisguerrero/.nuget/NuGet/NuGet.Config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
-            "projectReferences": {
-              "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Application/Application.csproj": {
-                "projectPath": "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Application/Application.csproj"
-              },
-              "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Domain/Domain.csproj": {
-                "projectPath": "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Domain/Domain.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        }
-      },
-      "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
-          "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[9.0.0-rc.2.24474.1, )"
-            },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[9.0.0-rc.2.24474.1, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[9.0.0-rc.2.24474.1, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    }
-  }
-=======
-{
-  "format": 1,
-  "restore": {
-    "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Infrastructure/Infrastructure.csproj": {}
-  },
-  "projects": {
-    "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Application/Application.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Application/Application.csproj",
-        "projectName": "Application",
-        "projectPath": "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Application/Application.csproj",
-        "packagesPath": "/home/lewisguerrero/.nuget/packages/",
-        "outputPath": "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Application/obj/",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "/home/lewisguerrero/.nuget/NuGet/NuGet.Config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
-            "projectReferences": {
-              "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Domain/Domain.csproj": {
-                "projectPath": "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Domain/Domain.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        }
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -273,31 +65,42 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.11, 8.0.11]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.11, 8.0.11]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Domain/Domain.csproj": {
+    "/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Domain/Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Domain/Domain.csproj",
+        "projectUniqueName": "/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Domain/Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Domain/Domain.csproj",
-        "packagesPath": "/home/lewisguerrero/.nuget/packages/",
-        "outputPath": "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Domain/obj/",
+        "projectPath": "/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Domain/Domain.csproj",
+        "packagesPath": "/home/lewisaramismanzanoguerrero/.nuget/packages/",
+        "outputPath": "/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/lewisguerrero/.nuget/NuGet/NuGet.Config"
+          "/home/lewisaramismanzanoguerrero/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "/usr/lib64/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -315,7 +118,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -331,42 +135,53 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.11, 8.0.11]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.11, 8.0.11]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Infrastructure/Infrastructure.csproj": {
+    "/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Infrastructure/Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Infrastructure/Infrastructure.csproj",
+        "projectUniqueName": "/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Infrastructure/Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Infrastructure/Infrastructure.csproj",
-        "packagesPath": "/home/lewisguerrero/.nuget/packages/",
-        "outputPath": "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Infrastructure/obj/",
+        "projectPath": "/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Infrastructure/Infrastructure.csproj",
+        "packagesPath": "/home/lewisaramismanzanoguerrero/.nuget/packages/",
+        "outputPath": "/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/lewisguerrero/.nuget/NuGet/NuGet.Config"
+          "/home/lewisaramismanzanoguerrero/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "/usr/lib64/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Application/Application.csproj": {
-                "projectPath": "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Application/Application.csproj"
+              "/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Application/Application.csproj": {
+                "projectPath": "/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Application/Application.csproj"
               },
-              "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Domain/Domain.csproj": {
-                "projectPath": "/home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Domain/Domain.csproj"
+              "/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Domain/Domain.csproj": {
+                "projectPath": "/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Domain/Domain.csproj"
               }
             }
           }
@@ -380,7 +195,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -416,15 +232,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.11, 8.0.11]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.11, 8.0.11]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
   }
->>>>>>> fac42beff8ed83c38e6b30ff1e3f717f9d4ec1e3
 }

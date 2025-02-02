@@ -20,10 +20,10 @@ public class SaleDetailsServices : SalesDetailUseCase
         public async Task<SalesDetail> CreateSalesDetail(SalesDetailsDto salesDetailsDto)
         {
             var newSalesDetails = new SalesDetail{
-                product = salesDetailsDto.product,
-                quantity = salesDetailsDto.quantity,
-                unitPrice = salesDetailsDto.unitPrice,
-                subtotal = salesDetailsDto.quantity*salesDetailsDto.unitPrice
+                product = salesDetailsDto.Product,
+                quantity = salesDetailsDto.Quantity,
+                unitPrice = salesDetailsDto.UnitPrice,
+                subtotal = salesDetailsDto.Quantity*salesDetailsDto.UnitPrice 
 
             };
             var SalesDetailCreate = await _saleDetailRepository.CreateSalesDetails(newSalesDetails);
@@ -43,7 +43,7 @@ public class SaleDetailsServices : SalesDetailUseCase
             var ListData = await _saleDetailRepository.GetAllSalesDetails();
             return ListData;
         }
-
+ 
         public async Task<SalesDetail> SalesDetailUnique(int SalesDetail_Id)
         {
             var saleDetail = await _saleDetailRepository.SalesDetailsFindById(SalesDetail_Id);

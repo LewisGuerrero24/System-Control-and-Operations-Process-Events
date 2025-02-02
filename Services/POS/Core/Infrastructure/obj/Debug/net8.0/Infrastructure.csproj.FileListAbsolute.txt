@@ -18,3 +18,23 @@
 /home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Infrastructure/obj/Debug/net8.0/Infrastructure.pdb
 /home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Infrastructure/obj/Debug/net8.0/Infrastructure.genruntimeconfig.cache
 /home/lewisguerrero/Documentos/Proyectos Personales/SCOPE/Services/POS/Core/Infrastructure/obj/Debug/net8.0/ref/Infrastructure.dll
+/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Infrastructure/obj/Debug/net8.0/Infrastructure.dll
+/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Infrastructure/obj/Debug/net8.0/refint/Infrastructure.dll
+/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Infrastructure/obj/Debug/net8.0/Infrastructure.pdb
+/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Infrastructure/obj/Debug/net8.0/Infrastructure.csproj.AssemblyReference.cache
+/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Infrastructure/obj/Debug/net8.0/Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Infrastructure/obj/Debug/net8.0/Infrastructure.AssemblyInfoInputs.cache
+/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Infrastructure/obj/Debug/net8.0/Infrastructure.AssemblyInfo.cs
+/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Infrastructure/obj/Debug/net8.0/Infrastructure.csproj.CoreCompileInputs.cache
+/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Infrastructure/obj/Debug/net8.0/Infrastructure.sourcelink.json
+/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Infrastructure/bin/Debug/net8.0/Infrastructure.deps.json
+/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Infrastructure/bin/Debug/net8.0/Infrastructure.runtimeconfig.json
+/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Infrastructure/bin/Debug/net8.0/Infrastructure.dll
+/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Infrastructure/bin/Debug/net8.0/Infrastructure.pdb
+/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Infrastructure/bin/Debug/net8.0/Application.dll
+/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Infrastructure/bin/Debug/net8.0/Domain.dll
+/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Infrastructure/bin/Debug/net8.0/Domain.pdb
+/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Infrastructure/bin/Debug/net8.0/Application.pdb
+/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Infrastructure/obj/Debug/net8.0/Infrastr.15EFFBFE.Up2Date
+/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Infrastructure/obj/Debug/net8.0/Infrastructure.genruntimeconfig.cache
+/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Infrastructure/obj/Debug/net8.0/ref/Infrastructure.dll

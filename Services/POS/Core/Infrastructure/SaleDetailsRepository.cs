@@ -32,6 +32,11 @@ namespace Infrastructure
             return salesDetail;
         }
 
+        public Task<SalesDetail> DeleteSalesDetails(int SalesDetail_Id)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<ICollection<SalesDetail>> GetAllSalesDetails()
         {
             return await _myContext.salesDetails.ToListAsync();
@@ -44,9 +49,24 @@ namespace Infrastructure
 
         }
 
-        public Task<SalesDetail> UpdateSalesDetails(SalesDetail salesDetailUpdate, SalesDetail newSalesDetails)
+        public async  Task<SalesDetail> UpdateSalesDetails(SalesDetail salesDetailUpdate, SalesDetail newSalesDetails)
         {
-            throw new NotImplementedException();
+               if (salesDetailUpdate != null)
+            {
+                // Modificar propiedades
+                salesDetailUpdate.Id = salesDetailUpdate.Id;
+                salesDetailUpdate.product = newSalesDetails.product;
+                salesDetailUpdate.quantity = newSalesDetails.quantity;
+                salesDetailUpdate.unitPrice = newSalesDetails.unitPrice;
+                salesDetailUpdate.subtotal = newSalesDetails.quantity*newSalesDetails.unitPrice;
+                //branchUpdate.UpdateDate =  DateTime.Today;
+                // ... otras propiedades
+
+                await _myContext.SaveChangesAsync();
+            }
+            return salesDetailUpdate;
         }
+
+        
     }
 }
