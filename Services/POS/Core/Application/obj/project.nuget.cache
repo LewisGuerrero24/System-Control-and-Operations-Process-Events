@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "kcrolPQnBkI=",
+  "dgSpecHash": "KU/nLiUDQ08=",
   "success": true,
   "projectFilePath": "/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Application/Application.csproj",
   "expectedPackageFiles": [
@@ -17,9 +17,7 @@
     "/home/lewisaramismanzanoguerrero/.nuget/packages/nlog/5.3.4/nlog.5.3.4.nupkg.sha512",
     "/home/lewisaramismanzanoguerrero/.nuget/packages/nlog.extensions.hosting/5.3.15/nlog.extensions.hosting.5.3.15.nupkg.sha512",
     "/home/lewisaramismanzanoguerrero/.nuget/packages/nlog.extensions.logging/5.3.15/nlog.extensions.logging.5.3.15.nupkg.sha512",
-    "/home/lewisaramismanzanoguerrero/.nuget/packages/system.diagnostics.diagnosticsource/8.0.0/system.diagnostics.diagnosticsource.8.0.0.nupkg.sha512",
-    "/home/lewisaramismanzanoguerrero/.nuget/packages/microsoft.netcore.app.ref/8.0.11/microsoft.netcore.app.ref.8.0.11.nupkg.sha512",
-    "/home/lewisaramismanzanoguerrero/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.11/microsoft.aspnetcore.app.ref.8.0.11.nupkg.sha512"
+    "/home/lewisaramismanzanoguerrero/.nuget/packages/system.diagnostics.diagnosticsource/8.0.0/system.diagnostics.diagnosticsource.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }
