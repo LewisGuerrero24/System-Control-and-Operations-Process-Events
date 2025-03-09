@@ -5199,36 +5199,35 @@
     ]
   },
   "packageFolders": {
-    "/home/lewisaramismanzanoguerrero/.nuget/packages/": {}
+    "/home/maicolcubides/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Infrastructure/Infrastructure.csproj",
+      "projectUniqueName": "/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/POS/Core/Infrastructure/Infrastructure.csproj",
       "projectName": "Infrastructure",
-      "projectPath": "/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Infrastructure/Infrastructure.csproj",
-      "packagesPath": "/home/lewisaramismanzanoguerrero/.nuget/packages/",
-      "outputPath": "/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Infrastructure/obj/",
+      "projectPath": "/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/POS/Core/Infrastructure/Infrastructure.csproj",
+      "packagesPath": "/home/maicolcubides/.nuget/packages/",
+      "outputPath": "/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/POS/Core/Infrastructure/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/lewisaramismanzanoguerrero/.nuget/NuGet/NuGet.Config"
+        "/home/maicolcubides/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "/usr/lib64/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Application/Application.csproj": {
-              "projectPath": "/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Application/Application.csproj"
+            "/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/POS/Core/Application/Application.csproj": {
+              "projectPath": "/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/POS/Core/Application/Application.csproj"
             },
-            "/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Domain/Domain.csproj": {
-              "projectPath": "/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Domain/Domain.csproj"
+            "/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/POS/Core/Domain/Domain.csproj": {
+              "projectPath": "/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/POS/Core/Domain/Domain.csproj"
             }
           }
         }
@@ -5237,13 +5236,7 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.100"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -5284,7 +5277,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/9.0.102/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.112/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

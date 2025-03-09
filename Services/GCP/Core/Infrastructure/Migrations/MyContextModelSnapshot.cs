@@ -17,27 +17,157 @@ namespace Infrastructure.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.0-rc.2.24474.1")
+                .HasAnnotation("ProductVersion", "8.0.5")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Domain.Entities.GoodsReceipt", b =>
+            modelBuilder.Entity("Domain.Entities.ApprovalWorkflow", b =>
                 {
-                    b.Property<long>("GoodsReceiptID")
+                    b.Property<int>("ApprovalWorkflowID")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ApprovalWorkflowID"));
+
+                    b.Property<DateTime>("ApprovalDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long>("ApprovedBy")
                         .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("GoodsReceiptID"));
+                    b.Property<string>("Comments")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModificationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("PurchaseRequestID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ApprovalWorkflowID");
+
+                    b.HasIndex("PurchaseRequestID");
+
+                    b.ToTable("ApprovalWorkflow");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Contract", b =>
+                {
+                    b.Property<int>("ContractID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ContractID"));
+
+                    b.Property<DateTime?>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("EndDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModificationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("SupplierID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Terms")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ContractID");
+
+                    b.HasIndex("SupplierID");
+
+                    b.ToTable("Contract");
+                });
+
+            modelBuilder.Entity("Domain.Entities.ExpenseReport", b =>
+                {
+                    b.Property<int>("ExpenseReportID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ExpenseReportID"));
+
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime?>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ExpenseType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModificationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("PurchaseOrderID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ExpenseReportID");
+
+                    b.HasIndex("PurchaseOrderID");
+
+                    b.ToTable("ExpenseReport");
+                });
+
+            modelBuilder.Entity("Domain.Entities.GoodsReceipt", b =>
+                {
+                    b.Property<int>("GoodsReceiptID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("GoodsReceiptID"));
+
+                    b.Property<string>("AttachmentPath")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModificationDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Notes")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long>("PurchaseOrderID")
-                        .HasColumnType("bigint");
-
-                    b.Property<int>("PurchaseOrderID1")
+                    b.Property<int>("PurchaseOrderID")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("ReceiptDate")
@@ -52,31 +182,41 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("GoodsReceiptID");
 
-                    b.HasIndex("PurchaseOrderID1");
+                    b.HasIndex("PurchaseOrderID");
 
-                    b.ToTable("GoodsReceipts");
+                    b.ToTable("GoodsReceipt");
                 });
 
             modelBuilder.Entity("Domain.Entities.GoodsReceiptDetail", b =>
                 {
-                    b.Property<long>("GoodsReceiptDetailID")
+                    b.Property<int>("GoodsReceiptDetailID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("GoodsReceiptDetailID"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("GoodsReceiptDetailID"));
 
-                    b.Property<long>("GoodsReceiptID")
-                        .HasColumnType("bigint");
+                    b.Property<DateTime?>("CreationDate")
+                        .HasColumnType("datetime2");
 
-                    b.Property<long>("ProductID")
-                        .HasColumnType("bigint");
+                    b.Property<string>("Discrepancies")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("GoodsReceiptID")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModificationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ProductID")
+                        .HasColumnType("int");
 
                     b.Property<string>("Quality")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("ReceivedQuantity")
-                        .HasColumnType("int");
 
                     b.Property<string>("WarehouseLocation")
                         .IsRequired()
@@ -86,7 +226,56 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("GoodsReceiptID");
 
-                    b.ToTable("GoodsReceiptDetails");
+                    b.ToTable("GoodsReceiptDetail");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Invoice", b =>
+                {
+                    b.Property<int>("InvoiceId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("InvoiceId"));
+
+                    b.Property<DateTime?>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DueDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("InvoiceNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("IssueDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("ModificationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("PurchaseOrderID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("SupplierID")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("TotalAmount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("InvoiceId");
+
+                    b.HasIndex("PurchaseOrderID");
+
+                    b.HasIndex("SupplierID");
+
+                    b.ToTable("Invoice");
                 });
 
             modelBuilder.Entity("Domain.Entities.PurchaseOrder", b =>
@@ -100,6 +289,9 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime?>("ActualDeliveryDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<DateTime?>("CreationDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Currency")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -110,12 +302,15 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime?>("EstimatedDeliveryDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModificationDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Notes")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("OrderDate")
-                        .HasColumnType("datetime2");
 
                     b.Property<string>("PaymentTerms")
                         .IsRequired()
@@ -128,30 +323,41 @@ namespace Infrastructure.Migrations
                     b.Property<int>("SupplierID")
                         .HasColumnType("int");
 
+                    b.Property<decimal>("TotalAmount")
+                        .HasColumnType("decimal(18,2)");
+
                     b.HasKey("PurchaseOrderID");
 
-                    b.ToTable("PurchaseOrders");
+                    b.HasIndex("SupplierID");
+
+                    b.ToTable("PurchaseOrder");
                 });
 
             modelBuilder.Entity("Domain.Entities.PurchaseOrderDetail", b =>
                 {
-                    b.Property<long>("PurchaseOrderDetailID")
+                    b.Property<int>("PurchaseOrderDetailID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("PurchaseOrderDetailID"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PurchaseOrderDetailID"));
+
+                    b.Property<DateTime?>("CreationDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("DestinationWarehouse")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModificationDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<long>("ProductID")
                         .HasColumnType("bigint");
 
-                    b.Property<long>("PurchaseOrderID")
-                        .HasColumnType("bigint");
-
-                    b.Property<int>("PurchaseOrderID1")
+                    b.Property<int>("PurchaseOrderID")
                         .HasColumnType("int");
 
                     b.Property<int>("Quantity")
@@ -169,22 +375,31 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("PurchaseOrderDetailID");
 
-                    b.HasIndex("PurchaseOrderID1");
+                    b.HasIndex("PurchaseOrderID");
 
-                    b.ToTable("PurchaseOrderDetails");
+                    b.ToTable("PurchaseOrderDetail");
                 });
 
             modelBuilder.Entity("Domain.Entities.PurchaseRequest", b =>
                 {
-                    b.Property<long>("PurchaseRequestID")
+                    b.Property<int>("PurchaseRequestID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("PurchaseRequestID"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PurchaseRequestID"));
 
                     b.Property<string>("Comments")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModificationDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<DateTime>("RequestDate")
                         .HasColumnType("datetime2");
@@ -198,16 +413,25 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("PurchaseRequestID");
 
-                    b.ToTable("PurchaseRequests");
+                    b.ToTable("PurchaseRequest");
                 });
 
             modelBuilder.Entity("Domain.Entities.PurchaseRequestDetail", b =>
                 {
-                    b.Property<long>("PurchaseRequestDetailID")
+                    b.Property<int>("PurchaseRequestDetailID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("PurchaseRequestDetailID"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PurchaseRequestDetailID"));
+
+                    b.Property<DateTime?>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModificationDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("NeededByDate")
                         .HasColumnType("datetime2");
@@ -215,8 +439,8 @@ namespace Infrastructure.Migrations
                     b.Property<long>("ProductID")
                         .HasColumnType("bigint");
 
-                    b.Property<long>("PurchaseRequestID")
-                        .HasColumnType("bigint");
+                    b.Property<int>("PurchaseRequestID")
+                        .HasColumnType("int");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
@@ -225,19 +449,122 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("PurchaseRequestID");
 
-                    b.ToTable("PurchaseRequestDetails");
+                    b.ToTable("PurchaseRequestDetail");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Return", b =>
+                {
+                    b.Property<int>("ReturnID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ReturnID"));
+
+                    b.Property<DateTime?>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("GoodsReceiptID")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModificationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ProductID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Reason")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ReturnedQuantity")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ReturnID");
+
+                    b.HasIndex("GoodsReceiptID");
+
+                    b.ToTable("Return");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Supplier", b =>
+                {
+                    b.Property<int>("SupplierID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SupplierID"));
+
+                    b.Property<bool>("Active")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("BankDetails")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ContactPerson")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModificationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PaymentTerms")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("SupplierID");
+
+                    b.ToTable("Supplier");
                 });
 
             modelBuilder.Entity("Domain.Entities.SupplierPayment", b =>
                 {
-                    b.Property<long>("SupplierPaymentID")
+                    b.Property<int>("SupplierPaymentID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("SupplierPaymentID"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SupplierPaymentID"));
 
                     b.Property<decimal>("Amount")
                         .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime?>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModificationDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<DateTime>("PaymentDate")
                         .HasColumnType("datetime2");
@@ -250,24 +577,54 @@ namespace Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long>("PurchaseOrderID")
-                        .HasColumnType("bigint");
-
-                    b.Property<int>("PurchaseOrderID1")
+                    b.Property<int>("PurchaseOrderID")
                         .HasColumnType("int");
 
                     b.HasKey("SupplierPaymentID");
 
-                    b.HasIndex("PurchaseOrderID1");
+                    b.HasIndex("PurchaseOrderID");
 
                     b.ToTable("SupplierPayment");
+                });
+
+            modelBuilder.Entity("Domain.Entities.ApprovalWorkflow", b =>
+                {
+                    b.HasOne("Domain.Entities.PurchaseRequest", "PurchaseRequest")
+                        .WithMany("ApprovalWorkflows")
+                        .HasForeignKey("PurchaseRequestID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("PurchaseRequest");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Contract", b =>
+                {
+                    b.HasOne("Domain.Entities.Supplier", "Supplier")
+                        .WithMany("Contracts")
+                        .HasForeignKey("SupplierID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Supplier");
+                });
+
+            modelBuilder.Entity("Domain.Entities.ExpenseReport", b =>
+                {
+                    b.HasOne("Domain.Entities.PurchaseOrder", "PurchaseOrder")
+                        .WithMany("ExpenseReports")
+                        .HasForeignKey("PurchaseOrderID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("PurchaseOrder");
                 });
 
             modelBuilder.Entity("Domain.Entities.GoodsReceipt", b =>
                 {
                     b.HasOne("Domain.Entities.PurchaseOrder", "PurchaseOrder")
                         .WithMany()
-                        .HasForeignKey("PurchaseOrderID1")
+                        .HasForeignKey("PurchaseOrderID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -277,7 +634,7 @@ namespace Infrastructure.Migrations
             modelBuilder.Entity("Domain.Entities.GoodsReceiptDetail", b =>
                 {
                     b.HasOne("Domain.Entities.GoodsReceipt", "GoodsReceipt")
-                        .WithMany()
+                        .WithMany("GoodsReceiptDetails")
                         .HasForeignKey("GoodsReceiptID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -285,11 +642,41 @@ namespace Infrastructure.Migrations
                     b.Navigation("GoodsReceipt");
                 });
 
+            modelBuilder.Entity("Domain.Entities.Invoice", b =>
+                {
+                    b.HasOne("Domain.Entities.PurchaseOrder", "PurchaseOrder")
+                        .WithMany("Invoices")
+                        .HasForeignKey("PurchaseOrderID")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Entities.Supplier", "Supplier")
+                        .WithMany("Invoices")
+                        .HasForeignKey("SupplierID")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("PurchaseOrder");
+
+                    b.Navigation("Supplier");
+                });
+
+            modelBuilder.Entity("Domain.Entities.PurchaseOrder", b =>
+                {
+                    b.HasOne("Domain.Entities.Supplier", "Supplier")
+                        .WithMany()
+                        .HasForeignKey("SupplierID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Supplier");
+                });
+
             modelBuilder.Entity("Domain.Entities.PurchaseOrderDetail", b =>
                 {
                     b.HasOne("Domain.Entities.PurchaseOrder", "PurchaseOrder")
-                        .WithMany()
-                        .HasForeignKey("PurchaseOrderID1")
+                        .WithMany("PurchaseOrderDetails")
+                        .HasForeignKey("PurchaseOrderID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -299,7 +686,7 @@ namespace Infrastructure.Migrations
             modelBuilder.Entity("Domain.Entities.PurchaseRequestDetail", b =>
                 {
                     b.HasOne("Domain.Entities.PurchaseRequest", "PurchaseRequest")
-                        .WithMany()
+                        .WithMany("PurchaseRequestDetails")
                         .HasForeignKey("PurchaseRequestID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -307,15 +694,58 @@ namespace Infrastructure.Migrations
                     b.Navigation("PurchaseRequest");
                 });
 
+            modelBuilder.Entity("Domain.Entities.Return", b =>
+                {
+                    b.HasOne("Domain.Entities.GoodsReceipt", "GoodsReceipt")
+                        .WithMany("Returns")
+                        .HasForeignKey("GoodsReceiptID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("GoodsReceipt");
+                });
+
             modelBuilder.Entity("Domain.Entities.SupplierPayment", b =>
                 {
                     b.HasOne("Domain.Entities.PurchaseOrder", "PurchaseOrder")
-                        .WithMany()
-                        .HasForeignKey("PurchaseOrderID1")
+                        .WithMany("SupplierPayments")
+                        .HasForeignKey("PurchaseOrderID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("PurchaseOrder");
+                });
+
+            modelBuilder.Entity("Domain.Entities.GoodsReceipt", b =>
+                {
+                    b.Navigation("GoodsReceiptDetails");
+
+                    b.Navigation("Returns");
+                });
+
+            modelBuilder.Entity("Domain.Entities.PurchaseOrder", b =>
+                {
+                    b.Navigation("ExpenseReports");
+
+                    b.Navigation("Invoices");
+
+                    b.Navigation("PurchaseOrderDetails");
+
+                    b.Navigation("SupplierPayments");
+                });
+
+            modelBuilder.Entity("Domain.Entities.PurchaseRequest", b =>
+                {
+                    b.Navigation("ApprovalWorkflows");
+
+                    b.Navigation("PurchaseRequestDetails");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Supplier", b =>
+                {
+                    b.Navigation("Contracts");
+
+                    b.Navigation("Invoices");
                 });
 #pragma warning restore 612, 618
         }

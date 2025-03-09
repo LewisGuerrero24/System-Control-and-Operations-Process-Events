@@ -1,26 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Domain/Domain.csproj": {}
+    "/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/POS/Core/Domain/Domain.csproj": {}
   },
   "projects": {
-    "/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Domain/Domain.csproj": {
+    "/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/POS/Core/Domain/Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Domain/Domain.csproj",
+        "projectUniqueName": "/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/POS/Core/Domain/Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Domain/Domain.csproj",
-        "packagesPath": "/home/lewisaramismanzanoguerrero/.nuget/packages/",
-        "outputPath": "/home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Domain/obj/",
+        "projectPath": "/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/POS/Core/Domain/Domain.csproj",
+        "packagesPath": "/home/maicolcubides/.nuget/packages/",
+        "outputPath": "/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/POS/Core/Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/lewisaramismanzanoguerrero/.nuget/NuGet/NuGet.Config"
+          "/home/maicolcubides/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "/usr/lib64/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -33,13 +32,7 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -60,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.112/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

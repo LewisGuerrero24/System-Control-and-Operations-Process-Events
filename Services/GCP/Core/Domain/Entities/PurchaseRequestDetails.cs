@@ -7,16 +7,23 @@ namespace Domain.Entities
 {
     public class PurchaseRequestDetail
     {
-        public long PurchaseRequestDetailID { get; set; }
+        public int PurchaseRequestDetailID { get; set; } // Id del detalle de la solicitud de compra
+ 
+        public int PurchaseRequestID { get; set; } // Id de la solicitud de compra
 
-        public long PurchaseRequestID { get; set; } 
+        public long ProductID { get; set; } // Id del producto
 
-        public long ProductID { get; set; }
+        public int Quantity { get; set; } // Cantidad de productos
 
-        public int Quantity { get; set; }
+        public DateTime? NeededByDate { get; set; } // Fecha de la necesidad de productos
 
-        public DateTime? NeededByDate { get; set; }
+        public PurchaseRequest PurchaseRequest { get; set; } // Solicitud de compra
 
-        public PurchaseRequest PurchaseRequest { get; set; }
+        public bool IsActive { get; set; } // Activo o inactivo
+
+        public DateTime? CreationDate { get; set; } 
+
+        public DateTime? ModificationDate { get; set; }
+        
     }
 }

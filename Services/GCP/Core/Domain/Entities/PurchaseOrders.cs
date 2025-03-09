@@ -7,26 +7,41 @@ namespace Domain.Entities
 {
     public class PurchaseOrder 
     {
+        public int PurchaseOrderID { get; set; } // Id de la orden de compra
+        
+        public int SupplierID { get; set; } // Id del proveedor 
 
-        public int PurchaseOrderID { get; set; }
+        public DateTime? EstimatedDeliveryDate { get; set; } // Fecha de entrega estimada
         
-        public int SupplierID { get; set; }
+        public DateTime? ActualDeliveryDate { get; set; } // Fecha de entrega real
+        
+        public string PaymentTerms { get; set; } // Términos de pago
+        
+        public string Currency { get; set; } // Divisa o moneda
+        
+        public decimal Discount { get; set; } // Descuento
 
-        public DateTime OrderDate { get; set; }
+        public decimal TotalAmount { get; set; } // Total del pedido valor
         
-        public DateTime? EstimatedDeliveryDate { get; set; }
+        public string Notes { get; set; } // Notas
         
-        public DateTime? ActualDeliveryDate { get; set; }
-        
-        public string PaymentTerms { get; set; }
-        
-        public string Currency { get; set; }
-        
-        public decimal Discount { get; set; }
-        
-        public string Notes { get; set; }
-        
-        public string Status { get; set; }
+        public string Status { get; set; } // Pendiente, Aprobado, Rechazado
+
+        public DateTime? CreationDate { get; set; }
+
+        public DateTime? ModificationDate { get; set; }
+
+        public bool IsActive { get; set; } // Activo o inactivo
+
+        public List<PurchaseOrderDetail> PurchaseOrderDetails { get; set; } = new List<PurchaseOrderDetail>();
+
+        public List<Invoice> Invoices { get; set; } = new List<Invoice>();
+
+        public List<SupplierPayment> SupplierPayments { get; set; } = new List<SupplierPayment>();
+
+        public List<ExpenseReport> ExpenseReports { get; set; } = new List<ExpenseReport>();
+
+        public Supplier Supplier { get; set; }
 
     }
 }

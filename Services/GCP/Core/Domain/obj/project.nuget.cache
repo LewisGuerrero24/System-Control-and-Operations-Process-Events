@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kiKB4LgCpA0zk76CKLkvIEYvt9h0tH76nus4PmSKYdeUSbHJyX9yVoEAZKFC+/JxLm/UC7TS06LLOuD7rb2Qtw==",
+  "dgSpecHash": "r3Hc+CzeOmpC02Cl7g4RHaY4bQTdVAO0QEakBVW1ylvZ34asW6DCzId3PivfMd0RE7dSwpz2kakFgqs/0mA+5w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MAICOL\\Proyect-Microservices-System-Control-and-Operations-Process-Event\\Services\\GCP\\Core\\Domain\\Domain.csproj",
+  "projectFilePath": "/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/GCP/Core/Domain/Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

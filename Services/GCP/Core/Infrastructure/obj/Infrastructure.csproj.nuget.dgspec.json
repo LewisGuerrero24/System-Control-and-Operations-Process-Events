@@ -1,35 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MAICOL\\Proyect-Microservices-System-Control-and-Operations-Process-Event\\Services\\GCP\\Core\\Infrastructure\\Infrastructure.csproj": {}
+    "/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/GCP/Core/Infrastructure/Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MAICOL\\Proyect-Microservices-System-Control-and-Operations-Process-Event\\Services\\GCP\\Core\\Application\\Application.csproj": {
+    "/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/GCP/Core/Application/Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MAICOL\\Proyect-Microservices-System-Control-and-Operations-Process-Event\\Services\\GCP\\Core\\Application\\Application.csproj",
+        "projectUniqueName": "/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/GCP/Core/Application/Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\MAICOL\\Proyect-Microservices-System-Control-and-Operations-Process-Event\\Services\\GCP\\Core\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\MAICOL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MAICOL\\Proyect-Microservices-System-Control-and-Operations-Process-Event\\Services\\GCP\\Core\\Application\\obj\\",
+        "projectPath": "/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/GCP/Core/Application/Application.csproj",
+        "packagesPath": "/home/maicolcubides/.nuget/packages/",
+        "outputPath": "/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/GCP/Core/Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\MAICOL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/maicolcubides/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\MAICOL\\Proyect-Microservices-System-Control-and-Operations-Process-Event\\Services\\GCP\\Core\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\MAICOL\\Proyect-Microservices-System-Control-and-Operations-Process-Event\\Services\\GCP\\Core\\Domain\\Domain.csproj"
+              "/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/GCP/Core/Domain/Domain.csproj": {
+                "projectPath": "/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/GCP/Core/Domain/Domain.csproj"
               }
             }
           }
@@ -38,11 +36,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -64,28 +57,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.112/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\MAICOL\\Proyect-Microservices-System-Control-and-Operations-Process-Event\\Services\\GCP\\Core\\Domain\\Domain.csproj": {
+    "/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/GCP/Core/Domain/Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MAICOL\\Proyect-Microservices-System-Control-and-Operations-Process-Event\\Services\\GCP\\Core\\Domain\\Domain.csproj",
+        "projectUniqueName": "/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/GCP/Core/Domain/Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\MAICOL\\Proyect-Microservices-System-Control-and-Operations-Process-Event\\Services\\GCP\\Core\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\MAICOL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MAICOL\\Proyect-Microservices-System-Control-and-Operations-Process-Event\\Services\\GCP\\Core\\Domain\\obj\\",
+        "projectPath": "/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/GCP/Core/Domain/Domain.csproj",
+        "packagesPath": "/home/maicolcubides/.nuget/packages/",
+        "outputPath": "/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/GCP/Core/Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\MAICOL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/maicolcubides/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -98,11 +89,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -124,39 +110,37 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.112/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\MAICOL\\Proyect-Microservices-System-Control-and-Operations-Process-Event\\Services\\GCP\\Core\\Infrastructure\\Infrastructure.csproj": {
+    "/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/GCP/Core/Infrastructure/Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MAICOL\\Proyect-Microservices-System-Control-and-Operations-Process-Event\\Services\\GCP\\Core\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/GCP/Core/Infrastructure/Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\MAICOL\\Proyect-Microservices-System-Control-and-Operations-Process-Event\\Services\\GCP\\Core\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\MAICOL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MAICOL\\Proyect-Microservices-System-Control-and-Operations-Process-Event\\Services\\GCP\\Core\\Infrastructure\\obj\\",
+        "projectPath": "/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/GCP/Core/Infrastructure/Infrastructure.csproj",
+        "packagesPath": "/home/maicolcubides/.nuget/packages/",
+        "outputPath": "/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/GCP/Core/Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\MAICOL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/maicolcubides/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\MAICOL\\Proyect-Microservices-System-Control-and-Operations-Process-Event\\Services\\GCP\\Core\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\MAICOL\\Proyect-Microservices-System-Control-and-Operations-Process-Event\\Services\\GCP\\Core\\Application\\Application.csproj"
+              "/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/GCP/Core/Application/Application.csproj": {
+                "projectPath": "/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/GCP/Core/Application/Application.csproj"
               },
-              "C:\\Users\\MAICOL\\Proyect-Microservices-System-Control-and-Operations-Process-Event\\Services\\GCP\\Core\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\MAICOL\\Proyect-Microservices-System-Control-and-Operations-Process-Event\\Services\\GCP\\Core\\Domain\\Domain.csproj"
+              "/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/GCP/Core/Domain/Domain.csproj": {
+                "projectPath": "/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/GCP/Core/Domain/Domain.csproj"
               }
             }
           }
@@ -165,11 +149,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -178,17 +157,17 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[9.0.0-rc.2.24474.1, )"
+              "version": "[8.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.0-rc.2.24474.1, )"
+              "version": "[8.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[9.0.0-rc.2.24474.1, )"
+              "version": "[8.0.5, )"
             }
           },
           "imports": [
@@ -207,7 +186,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.112/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

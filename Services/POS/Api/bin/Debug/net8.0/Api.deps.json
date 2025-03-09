@@ -1186,18 +1186,12 @@
           "NLog.Extensions.Hosting": "5.3.15"
         },
         "runtime": {
-          "Application.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Application.dll": {}
         }
       },
       "Domain/1.0.0": {
         "runtime": {
-          "Domain.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Domain.dll": {}
         }
       },
       "Infrastructure/1.0.0": {
@@ -1209,10 +1203,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0-rc.2.24474.1"
         },
         "runtime": {
-          "Infrastructure.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Infrastructure.dll": {}
         }
       }
     }

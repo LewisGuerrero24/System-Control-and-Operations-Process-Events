@@ -22,3 +22,15 @@
 /home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Domain/obj/Debug/net8.0/refint/Domain.dll
 /home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Domain/obj/Debug/net8.0/Domain.pdb
 /home/lewisaramismanzanoguerrero/Documentos/SCOPE/System-Control-and-Operations-Process-Events/Services/POS/Core/Domain/obj/Debug/net8.0/ref/Domain.dll
+/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/POS/Core/Domain/bin/Debug/net8.0/Domain.deps.json
+/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/POS/Core/Domain/bin/Debug/net8.0/Domain.dll
+/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/POS/Core/Domain/bin/Debug/net8.0/Domain.pdb
+/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/POS/Core/Domain/obj/Debug/net8.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/POS/Core/Domain/obj/Debug/net8.0/Domain.AssemblyInfoInputs.cache
+/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/POS/Core/Domain/obj/Debug/net8.0/Domain.AssemblyInfo.cs
+/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/POS/Core/Domain/obj/Debug/net8.0/Domain.csproj.CoreCompileInputs.cache
+/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/POS/Core/Domain/obj/Debug/net8.0/Domain.sourcelink.json
+/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/POS/Core/Domain/obj/Debug/net8.0/Domain.dll
+/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/POS/Core/Domain/obj/Debug/net8.0/refint/Domain.dll
+/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/POS/Core/Domain/obj/Debug/net8.0/Domain.pdb
+/home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/POS/Core/Domain/obj/Debug/net8.0/ref/Domain.dll

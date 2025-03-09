@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Application
-build_property.ProjectDir = C:\Users\MAICOL\Proyect-Microservices-System-Control-and-Operations-Process-Event\Services\GCP\Core\Application\
+build_property.ProjectDir = /home/maicolcubides/Documentos/System-Control-and-Operations-Process-Events/System-Control-and-Operations-Process-Events/Services/GCP/Core/Application/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
